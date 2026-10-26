@@ -1,0 +1,15 @@
+{
+  "name": "mailpassed",
+  "owner": {
+    "name": "mailpassed.com",
+    "email": "hello@mailpassed.com"
+  },
+  "description": "Email authentication, bounce and Microsoft 365 SMTP AUTH skills from mailpassed.com.",
+  "plugins": [
+    {
+      "name": "mailpassed",
+      "source": "./",
+      "description": "Diagnose SPF, DKIM, DMARC, DNSSEC and CAA from live DNS, decode bounce errors, and move Microsoft 365 devices off SMTP AUTH Basic authentication."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mailpassed",
+  "displayName": "mailpassed: email authentication and SMTP fixes",
+  "version": "1.0.0",
+  "description": "Diagnose SPF, DKIM, DMARC, DNSSEC and CAA from live DNS, decode email bounce errors, and move Microsoft 365 printers, scanners and apps off SMTP AUTH Basic authentication before it is turned off by default at the end of December 2026.",
+  "author": {
+    "name": "mailpassed.com",
+    "email": "hello@mailpassed.com",
+    "url": "https://mailpassed.com"
+  },
+  "homepage": "https://mailpassed.com",
+  "repository": "https://github.com/Donrulezz/mailpassed-email-skills",
+  "license": "MIT",
+  "keywords": ["email", "spf", "dkim", "dmarc", "deliverability", "bounce", "smtp", "microsoft-365", "exchange-online", "dnssec"]
+}
