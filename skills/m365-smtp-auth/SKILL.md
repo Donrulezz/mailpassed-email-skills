@@ -25,8 +25,9 @@ own account. Give them the commands; don't run them yourself.
 
 ```powershell
 Install-Module ExchangeOnlineManagement -Scope CurrentUser
-Install-Script Find-SmtpAuthSenders -Scope CurrentUser
-Find-SmtpAuthSenders.ps1                                     # settings only: who may use SMTP AUTH
+Install-Script -Scope CurrentUser -Name Find-SmtpAuthSenders
+# Settings only (who may use SMTP AUTH), then everything:
+Find-SmtpAuthSenders.ps1
 Find-SmtpAuthSenders.ps1 -IncludeUsageReport -IncludeSignInLogs -AdminCenterCsv .\smtpauth.csv
 ```
 
