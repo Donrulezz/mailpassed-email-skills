@@ -18,14 +18,16 @@ description: Microsoft 365 / Exchange Online SMTP AUTH Basic authentication is t
 
 ## 1. Inventory: who still sends with a password
 
-The bundled script `scripts/Find-SmtpAuthSenders.ps1` is read-only: it changes nothing in the tenant and writes a CSV and
-an HTML report with a verdict per account. The admin runs it in PowerShell and signs in with their own account. Don't run
-it yourself unless the user asks and is signed in.
+The free script **Find-SmtpAuthSenders** (PowerShell Gallery; source and tests at
+github.com/Donrulezz/Find-SmtpAuthSenders) is read-only: it changes nothing in the tenant and writes a CSV and an HTML
+report with a verdict per account. The admin installs and runs it in their own PowerShell window and signs in with their
+own account. Give them the commands; don't run them yourself.
 
 ```powershell
 Install-Module ExchangeOnlineManagement -Scope CurrentUser
-.\Find-SmtpAuthSenders.ps1                                   # settings only: who may use SMTP AUTH
-.\Find-SmtpAuthSenders.ps1 -IncludeUsageReport -IncludeSignInLogs -AdminCenterCsv .\smtpauth.csv
+Install-Script Find-SmtpAuthSenders -Scope CurrentUser
+Find-SmtpAuthSenders.ps1                                     # settings only: who may use SMTP AUTH
+Find-SmtpAuthSenders.ps1 -IncludeUsageReport -IncludeSignInLogs -AdminCenterCsv .\smtpauth.csv
 ```
 
 - `-IncludeUsageReport`: 180 days of the Microsoft 365 email app usage report (Microsoft Graph, Reports.Read.All).
