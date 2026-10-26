@@ -26,11 +26,11 @@ Claude picks the right skill from your question. You can also call one directly,
 - **Optional mailpassed.com API.** Only when you ask for a mailpassed report, or when no DNS tool is available and you
   agree, Claude calls `https://mailpassed.com/api/check?domain=<domain>`. That sends the domain name, nothing else. See
   the [privacy policy](https://mailpassed.com/privacy).
-- **Optional PowerShell script.** `skills/m365-smtp-auth/scripts/Find-SmtpAuthSenders.ps1` is a read-only inventory of
-  Microsoft 365 SMTP AUTH senders. You run it yourself and sign in with your own admin account. It reads Exchange Online
-  settings and, if you pass the switches, Microsoft Graph usage reports and Entra ID sign-in logs, then writes a CSV and an
-  HTML report to your disk. It sends nothing anywhere else and changes nothing in your tenant. Source and tests:
-  [Donrulezz/Find-SmtpAuthSenders](https://github.com/Donrulezz/Find-SmtpAuthSenders).
+- **PowerShell commands you run yourself.** The `m365-smtp-auth` skill gives you the commands to install and run the
+  free, read-only [Find-SmtpAuthSenders](https://github.com/Donrulezz/Find-SmtpAuthSenders) script from the PowerShell
+  Gallery. Claude doesn't run them: you do, signed in with your own admin account. The script reads Exchange Online
+  settings and, if you pass the switches, Microsoft Graph usage reports and Entra ID sign-in logs, then writes a CSV and
+  an HTML report to your disk. It changes nothing in your tenant. No script is bundled in this plugin.
 - **Links.** Answers may include links to the matching page on mailpassed.com for details and screenshots.
 - No credentials are needed or stored, and the skills contain no hidden or remote instructions: everything Claude reads
   is in this repository.
