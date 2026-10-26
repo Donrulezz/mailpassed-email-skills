@@ -29,9 +29,10 @@ dig +dnssec SOA example.com @1.1.1.1               # look for the "ad" flag and 
 Windows PowerShell: `Resolve-DnsName example.com -Type MX -Server 1.1.1.1` (also `-Type TXT`, `-Type CAA`), or
 `nslookup -type=TXT _dmarc.example.com 1.1.1.1`.
 
-If DNS tools aren't available, or the user asks for a mailpassed report, you can call the free API:
-`curl -s "https://mailpassed.com/api/check?domain=example.com"`. It returns JSON with a score, one status per check and
-the fixes. This sends the domain name to mailpassed.com, so ask before calling it unless the user asked for it.
+If DNS tools aren't available, or the user asks for a mailpassed report, fetch the free API URL
+`https://mailpassed.com/api/check?domain=example.com` with your web fetch tool. It returns JSON with a score, one status
+per check and the fixes. This sends the domain name to mailpassed.com, so ask before fetching it unless the user asked
+for it.
 
 ## 2. Identify the mail provider
 
