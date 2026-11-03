@@ -52,8 +52,13 @@ time-sensitive.
 
 ## Paid help (optional)
 
-The skills are complete on their own. If you'd rather not do it yourself, mailpassed.com links to a $9 per-domain fix plan,
-printable fix kits and done-for-you setup. None of it is required.
+The skills are complete on their own. If you'd rather not do it yourself:
+- [Email authentication fixed for you](https://mailpassed.com/go/buy-email-fix) ($29 per domain): the exact SPF, DKIM
+  and DMARC records and steps for every service that sends as your domain within 24 hours, re-checked until they pass.
+- [Scan to email fixed for you](https://mailpassed.com/go/buy-scan-fix) ($39 per office, up to 3 devices): device settings and
+  Microsoft 365 steps for printers and apps that send through Microsoft 365.
+
+None of it is required.
 
 ## License
 
